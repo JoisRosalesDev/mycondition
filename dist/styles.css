@@ -592,6 +592,11 @@ video {
   font-weight: bold;
 }
 
+.my-1{
+  margin-top: 0.50rem;
+  margin-bottom: 0.50rem;
+}
+
 .my-2 {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -840,4 +845,17 @@ video {
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+}
+
+.w-icon{
+  width: 32px;
+  height: auto;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.justify-center {
+  justify-content: center;
 }

@@ -13,6 +13,14 @@ const resumenObjetivo = document.getElementById('resumen-objetivo');
 const imcResultado = document.getElementById('resultado-imc');
 const caloriasResultado = document.getElementById('resultado-calorias');
 
+// Inicializar animaciones con AOS
+document.addEventListener("DOMContentLoaded", function () {
+    AOS.init({
+        duration: 1000, // Duración de la animación en milisegundos
+        once: true      // La animación se ejecuta solo una vez
+    });
+});
+
 // Función para calcular el IMC
 function calcularIMC(peso, altura) {
     const alturaEnMetros = altura / 100;
@@ -71,4 +79,13 @@ form.addEventListener('submit', (event) => {
 
     imcResultado.textContent = imc;
     caloriasResultado.textContent = `${calorias} kcal`;
+
+    // Agregar animaciones a los elementos del resumen
+    resumenEdad.setAttribute('data-aos', 'fade-up');
+    resumenAltura.setAttribute('data-aos', 'fade-up');
+    resumenPeso.setAttribute('data-aos', 'fade-up');
+    resumenGenero.setAttribute('data-aos', 'fade-up');
+    resumenObjetivo.setAttribute('data-aos', 'fade-up');
+    imcResultado.setAttribute('data-aos', 'fade-in');
+    caloriasResultado.setAttribute('data-aos', 'fade-in');
 });
