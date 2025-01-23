@@ -568,7 +568,7 @@ video {
   text-align: center;
 }
 
-.text-xl{
+.text-xl {
   font-size: 1rem;
 }
 
@@ -592,7 +592,7 @@ video {
   font-weight: bold;
 }
 
-.my-1{
+.my-1 {
   margin-top: 0.50rem;
   margin-bottom: 0.50rem;
 }
@@ -847,8 +847,13 @@ video {
   margin-right: 0.5rem;
 }
 
-.w-icon{
+.w-icon {
   width: 32px;
+  height: auto;
+}
+
+.w-items {
+  width: 150px;
   height: auto;
 }
 
@@ -858,4 +863,132 @@ video {
 
 .justify-center {
   justify-content: center;
+}
+
+.grid-template-columns {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.drop-shadow {
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.1));
+}
+
+/* Contenedor principal */
+#container {
+  max-width: 1280px;
+  /* Ancho máximo del contenedor */
+  margin: 0 auto;
+  /* Centrar el contenedor horizontalmente */
+  padding: 2rem 1rem;
+  /* Espaciado superior/inferior y lateral */
+}
+
+@media (min-width: 640px) {
+  #container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  #container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Contenedor de productos */
+#productos {
+  display: grid;
+  /* Diseño de cuadrícula */
+  grid-template-columns: repeat(1, 1fr);
+  /* Una columna por fila */
+  gap: 1.5rem;
+  /* Espaciado entre las tarjetas */
+}
+
+@media (min-width: 500px) {
+  #productos {
+    grid-template-columns: repeat(2, 1fr);
+    /* Dos columnas en pantallas medianas */
+  }
+}
+
+@media (min-width: 1024px) {
+  #productos {
+    grid-template-columns: repeat(3, 1fr);
+    /* Tres columnas en pantallas grandes */
+  }
+}
+
+/* Estilos de la tarjeta de producto */
+.producto {
+  border-radius: 0.5rem;
+  /* Bordes redondeados */
+  overflow: hidden;
+  /* Ocultar contenido que sobresalga */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Sombra para profundidad */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  /* Transiciones */
+}
+
+.producto:hover {
+  transform: scale(1.05);
+  /* Agrandar ligeramente al pasar el mouse */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  /* Incrementar la sombra */
+}
+
+/* Imagen del producto */
+.producto img {
+  width: fit-content;
+  /* Imagen ocupa el ancho completo */
+  height: auto;
+  /* Altura fija */
+  object-fit: cover;
+  /* Mantener proporciones sin distorsión */
+}
+
+/* Descripción del producto */
+.producto .descripcion {
+  color: #4a5568; /* Texto gris oscuro */
+  font-size: 1rem; /* Tamaño de fuente */
+  font-weight: 500; /* Peso medio */
+  padding: 1rem; /* Espaciado interno */
+  overflow: hidden; /* Ocultar contenido desbordado */
+  text-overflow: ellipsis; /* Agregar puntos suspensivos al final */
+  white-space: nowrap; /* Evitar saltos de línea */
+  max-width: 100%; /* Asegurar que respete el contenedor */
+  display: inline-block; /* Para que el contenedor se ajuste correctamente */
+}
+
+
+/* Botón del producto */
+.producto a {
+  display: block;
+  /* Ocupa el ancho completo */
+  text-align: center;
+  /* Centrar texto */
+  background-color: #2563eb;
+  /* Fondo azul */
+  color: #ffffff;
+  /* Texto blanco */
+  padding: 0.5rem 0;
+  /* Espaciado vertical */
+  border-radius: 0 0 0.5rem 0.5rem;
+  /* Bordes redondeados inferiores */
+  text-decoration: none;
+  /* Eliminar subrayado */
+  transition: background-color 0.2s ease-in-out;
+  /* Transición de fondo */
+}
+
+.producto a:hover {
+  background-color: #1d4ed8;
+  /* Fondo azul más oscuro al pasar el mouse */
 }

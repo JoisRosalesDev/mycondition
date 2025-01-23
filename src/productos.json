@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "nombre": "One C Mix",
+        "descripcion": "Añade One C Mix a tu día a día. Incluye vitaminas A, C y E, aminoácidos, vitaminas y minerales con su delicioso sabor mango verde.",
+        "imagen": "https://portal.omnilife.com/uploads/images/products/detail/chi/new/6305929.png",
+        "link": "https://portal.omnilife.com/productos/one-c-mix-6305929",
+        "objetivo": "Fortalecer el Sistema Inmunológico"
+    },
+    {
+        "id": 2,
+        "nombre": "Omniplus",
+        "descripcion": "Producto nutricional sabor frutas, que contiene vitamina A, complejo B (B1, B2, Niacina, B6, B12, Ácido Pantotenico, minerales como Calcio, Cobre, Yodo, Magnesio, Manganeso, Zinc, Selenio, Gel de Sabila y extractos de schizandra, nuez de cola, guaraná y trigo.",
+        "imagen": "https://portal.omnilife.com/uploads/images/products/detail/chi/new/2350430.png",
+        "link": "https://portal.omnilife.com/productos/omniplus-2350430",
+        "objetivo": "Fortalecer el Sistema Inmunológico"
+    },
+    {
+        "id": 3,
+        "nombre": "Uzo Supreme",
+        "descripcion": "Producto nutricional, salvado de arroz, proteína, adicionado con vitamina E, fortificado con selenio y fibra de avena.",
+        "imagen": "https://portal.omnilife.com/uploads/images/products/detail/chi/new/3875700.png",
+        "link": "https://portal.omnilife.com/productos/uzo-supreme-3875700",
+        "objetivo": "Fortalecer el Sistema Inmunológico"
+    }
+]
