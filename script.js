@@ -12,10 +12,10 @@ const resumenGenero = document.getElementById('resumen-genero');
 const resumenObjetivo = document.getElementById('resumen-objetivo');
 const imcResultado = document.getElementById('resultado-imc');
 const caloriasResultado = document.getElementById('resultado-calorias');
-const productosRecomendadosContainer = document.getElementById('productos-recomendados');
+const productosContainer = document.getElementById('productos');
 
 // Inicializar animaciones con AOS
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', () => {
     AOS.init({
         duration: 1000,
         once: true
@@ -39,67 +39,65 @@ function calcularCalorias(edad, peso, altura, genero, objetivo) {
     }
 
     switch (objetivo) {
-        case 'perder peso':
+        case 'Perder peso':
             return Math.round(tmb * 0.8);
         case 'Aumentar energía':
             return Math.round(tmb * 1.1);
-        case 'Fortalecer el Sistema Inmunológico':
+        case 'Fortalecer Sistema Inmunológico':
             return Math.round(tmb);
-        case 'Mejorar la Salud Digestiva':
+        case 'Mejorar Salud Digestiva':
             return Math.round(tmb);
-        case 'Detoxificación':
-            return Math.round(tmb * 0.9);
-        case 'Salud Cardiovascular':
-            return Math.round(tmb * 1);
-        case 'Mejora de la Concentración y Memoria':
+        case 'Mejora Concentración y Memoria':
             return Math.round(tmb * 1.05);
         default:
             return Math.round(tmb);
     }
 }
 
-// Función para procesar los datos del archivo JSON
-function procesarProductos() {
-    // Obtener el archivo JSON
-    fetch('./productos.json')
-        .then(response => response.json())
-        .then(data => {
-            // Crear un elemento para contener los productos
-            const productosElement = document.getElementById('productos');
+// Función para cargar y filtrar productos
+async function cargarProductos(objetivoUsuario) {
+    try {
+        const response = await fetch('./productos.json');
+        if (!response.ok) {
+            throw new Error('Error al cargar el archivo JSON');
+        }
 
-            // Recorrer los productos y crear un elemento para cada uno
-            data.forEach(producto => {
-                const productoElement = document.createElement('div');
-                productoElement.classList.add('producto');
+        const productos = await response.json();
+        const productosFiltrados = productos.filter(producto => producto.objetivo === objetivoUsuario);
 
-                // Crear un elemento para la imagen
-                const imagenElement = document.createElement('img');
-                imagenElement.src = producto.imagen;
-                productoElement.appendChild(imagenElement);
-
-                // Crear un elemento para la descripción
-                const descripcionElement = document.createElement('p');
-                descripcionElement.classList.add('descripcion');
-                descripcionElement.textContent = producto.descripcion;
-                productoElement.appendChild(descripcionElement);
-
-                // Crear un elemento para el enlace
-                const enlaceElement = document.createElement('a');
-                enlaceElement.href = producto.link;
-                enlaceElement.textContent = 'Ver más';
-                productoElement.appendChild(enlaceElement);
-
-                // Agregar el producto al contenedor
-                productosElement.appendChild(productoElement);
-            });
-        })
-        .catch(error => console.error('Error:', error));
+        mostrarProductos(productosFiltrados);
+    } catch (error) {
+        console.error('Error al cargar los productos:', error);
+        productosContainer.innerHTML = '<p>Error al cargar los productos. Inténtalo de nuevo más tarde.</p>';
+    }
 }
 
-// Llamar a la función para procesar los productos
-procesarProductos();
+// Función para mostrar productos en el DOM
+function mostrarProductos(productos) {
+    productosContainer.innerHTML = ''; // Limpiar el contenedor
 
-// Función para manejar el envío del formulario
+    if (productos.length === 0) {
+        productosContainer.innerHTML = '<p>No se encontraron productos para este objetivo.</p>';
+        return;
+    }
+
+    productos.forEach(producto => {
+        const productCard = `
+        <div class="producto bg-white rounded-md shadow-lg transition-transform transform hover:scale-105">
+            <img src="${producto.imagen}" alt="${producto.nombre}" class="w-full h-32 object-cover rounded-md drop-shadow-md">
+            <h2 class="mt-4 p-2 text-lg font-bold text-gray-800">${producto.nombre}</h2>
+            <p class="mt-2 text-sm text-gray-700 descripcion">${producto.descripcion}</p>
+            <a href="${producto.link}" target="_blank" 
+               class=" text-white w-full bg-blue-600 rounded-md hover:bg-blue-700 transition-colors">
+               Más información
+            </a>
+        </div>
+    `;
+        productosContainer.innerHTML += productCard;
+    });
+}
+
+// Manejar el envío del formulario
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -126,5 +124,6 @@ form.addEventListener('submit', (event) => {
     imcResultado.textContent = imc;
     caloriasResultado.textContent = `${calorias} kcal`;
 
+    // Cargar y mostrar productos relacionados al objetivo
     cargarProductos(objetivo);
 });

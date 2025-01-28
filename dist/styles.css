@@ -148,7 +148,7 @@
 
 html,
 :host {
-  background: linear-gradient(to right, #2563eb, #4f46e5);
+  background: linear-gradient(to right, #1e3a8a, #7c3aed);
 
   line-height: 1.5;
   /* 1 */
@@ -711,7 +711,7 @@ video {
 }
 
 .gap-4 {
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .max-w-md {
@@ -719,7 +719,7 @@ video {
 }
 
 .max-w-4xl {
-  max-width: 56rem;
+  max-width: 42rem;
 }
 
 .w-full {
@@ -991,4 +991,13 @@ video {
 .producto a:hover {
   background-color: #1d4ed8;
   /* Fondo azul más oscuro al pasar el mouse */
+}
+
+.bg-button{
+  background: linear-gradient(to right, #1e3a8a, #7c3aed);
+  transition: background 0.3s ease-in-out;
+}
+
+.hover\:bg-button:hover{
+  background: linear-gradient(to right, #7c3aed, #f43f5e);
 }
