@@ -49,6 +49,14 @@
     },
     {
         "id": 7,
+        "nombre": "Cafezzino Plus",
+        "descripcion": "Caja c/30 sachets 150g.",
+        "imagen": "https://portal.omnilife.com/uploads/images/products/detail/chi/new/5177493.png",
+        "link": "https://portal.omnilife.com/productos/cafezzino-plus-5177493",
+        "objetivo": "Perder peso"
+    },
+    {
+        "id": 8,
         "nombre": "Magnus Supreme",
         "descripcion": "Producto nutricional, sabor naranja, que contiene complejo B.",
         "imagen": "https://portal.omnilife.com/uploads/images/products/detail/chi/es/2075722.png",
@@ -56,7 +64,7 @@
         "objetivo": "Aumentar energía"
     },
     {
-        "id": 8,
+        "id": 9,
         "nombre": "Power Maker",
         "descripcion": "Producto nutricional, sabor naranja, que contiene Arginina, Colina, Glicina, Vitaminas C y E.",
         "imagen": "https://portal.omnilife.com/uploads/images/products/detail/chi/new/2603201.png",
@@ -64,7 +72,7 @@
         "objetivo": "Aumentar energía"
     },
     {
-        "id": 9,
+        "id": 10,
         "nombre": "Omniplus",
         "descripcion": "Producto nutricional sabor frutas, que contiene vitamina A, complejo B.",
         "imagen": "https://portal.omnilife.com/uploads/images/products/detail/chi/new/2350430.png",
@@ -72,7 +80,15 @@
         "objetivo": "Aumentar energía"
     },
     {
-        "id": 10,
+        "id": 11,
+        "nombre": "Optimus",
+        "descripcion": "Producto Nutricional sabor lima limón, con Colina, glicina, Vitamina C, E.",
+        "imagen": "https://portal.omnilife.com/uploads/images/products/detail/chi/new/2505711.png",
+        "link": "https://portal.omnilife.com/productos/optimus-2505711",
+        "objetivo": "Aumentar energía"
+    },
+    {
+        "id": 12,
         "nombre": "Probiotic Supreme",
         "descripcion": "Producto nutricional, sabor limón-moras, que contiene probióticos.",
         "imagen": "https://portal.omnilife.com/uploads/images/products/detail/chi/es/6722800.png",
@@ -80,7 +96,7 @@
         "objetivo": "Mejorar Salud Digestiva"
     },
     {
-        "id": 11,
+        "id": 13,
         "nombre": "Aloe Beta",
         "descripcion": "Bebida sabor piña, que contiene aloe vera, vitamina E.",
         "imagen": "https://portal.omnilife.com/uploads/images/products/detail/chi/new/4250604.png",
@@ -88,7 +104,7 @@
         "objetivo": "Mejorar Salud Digestiva"
     },
     {
-        "id": 12,
+        "id": 14,
         "nombre": "Fiber'n Plus",
         "descripcion": "Producto nutricional sabor durazno.",
         "imagen": "https://portal.omnilife.com/uploads/images/products/detail/chi/new/1502208.png",
@@ -96,7 +112,7 @@
         "objetivo": "Mejorar Salud Digestiva"
     },
     {
-        "id": 13,
+        "id": 15,
         "nombre": "Optimus",
         "descripcion": "Producto Nutricional sabor lima limón, con Colina, glicina, Vitamina C, E.",
         "imagen": "https://portal.omnilife.com/uploads/images/products/detail/chi/new/2505711.png",
@@ -104,7 +120,7 @@
         "objetivo": "Mejora Concentración y Memoria"
     },
     {
-        "id": 14,
+        "id": 16,
         "nombre": "Magnus Supreme",
         "descripcion": "Producto nutricional, sabor naranja, que contiene complejo B.",
         "imagen": "https://portal.omnilife.com/uploads/images/products/detail/chi/es/2075722.png",
@@ -112,11 +128,27 @@
         "objetivo": "Mejora Concentración y Memoria"
     },
     {
-        "id": 15,
+        "id": 17,
         "nombre": "Starb",
         "descripcion": "Disfruta de su rico sabor naranja limón. vitaminas del complejo B, antioxidantes, minerales.",
         "imagen": "https://portal.omnilife.com/uploads/images/products/detail/bol/new/3000730_.png",
         "link": "https://portal.omnilife.com/productos/starb-3000730",
         "objetivo": "Mejora Concentración y Memoria"
+    },
+    {
+        "id": 18,
+        "nombre": "Super Mix Supreme",
+        "descripcion": "Malteada sabor vainilla, que contiene proteína, vitamina A, complejo B.",
+        "imagen": "https://portal.omnilife.com/uploads/images/products/detail/chi/es/3178516.png",
+        "link": "https://portal.omnilife.com/productos/omnilife-super-mix-supreme-3178516",
+        "objetivo": "Aumentar masa muscular"
+    },
+    {
+        "id": 19,
+        "nombre": "Power Maker",
+        "descripcion": "Producto nutricional, sabor naranja, que contiene Arginina, Colina, Glicina, Vitaminas C y E.",
+        "imagen": "https://portal.omnilife.com/uploads/images/products/detail/chi/new/2603201.png",
+        "link": "https://portal.omnilife.com/productos/power-maker-2603201",
+        "objetivo": "Aumentar masa muscular"
     }
 ]
