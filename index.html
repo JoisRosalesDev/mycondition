@@ -1,130 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My condition</title>
-    <link rel="stylesheet" href="./dist/styles.css">
+    <link rel="stylesheet" href="./dist/styles.css" />
     <script src="./script.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-</head>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  </head>
 
-<body>
-    <header class="mx-2 my-2 font-bold text-center text-white" data-aos="fade-down">
-        <h1 class="text-4xl">My Condition</h1>
-        <p class="text-2xl">Recomendaciones personalizadas para tu salud</p>
+  <body>
+    <header
+      class="mx-2 my-2 font-bold text-center text-white"
+      data-aos="fade-down"
+    >
+      <h1 class="text-4xl">My Condition</h1>
+      <p class="text-2xl">Recomendaciones personalizadas para tu salud</p>
     </header>
     <main class="flex flex-col items-center w-full px-4">
-        <div class="w-full max-w-4xl p-6 bg-white rounded-md shadow-lg" data-aos="zoom-in">
-            <h1 class="mb-6 text-2xl font-bold text-gray-800 ">Ingresa tus datos</h1>
-            <form class="space-y-4" id="form-calculadora">
-                <div class="md:grid md:grid-cols-2 md:gap-4">
-                    <div class="flex flex-col my-1">
-                        <div class="flex flex-wrap">
-                            <label for="edad" class="mb-2 text-gray-700">Edad</label>
-                            <img src="./assets/user.svg" alt="user-icon" class="mb-2">
-                        </div>
-                        <input type="number" id="edad" name="edad" placeholder="Años"
-                            class="border-gray-300 rounded-md form-input focus:border-blue-500 focus:ring-blue-500 icon-placeholder"
-                            required>
-                    </div>
-                    <div class="flex flex-col my-1">
-                        <div class="flex flex-wrap">
-                            <label for="altura" class="mb-2 text-gray-700">Altura</label>
-                            <img src="./assets/ruler.svg" alt="ruler-icon" class="mb-2">
-                        </div>
-                        <input type="number" id="altura" name="altura" placeholder="cm"
-                            class="border-gray-300 rounded-md form-input focus:border-blue-500 focus:ring-blue-500">
-                    </div>
-                    <div class="flex flex-col">
-                        <div class="flex flex-wrap">
-                            <label for="peso" class="mb-2 text-gray-700">Peso</label>
-                            <img src="./assets/weight.svg" alt="weight-icon" class="mb-2">
-                        </div>
-                        <input type="number" id="peso" name="peso" placeholder="kg"
-                            class="border-gray-300 rounded-md form-input focus:border-blue-500 focus:ring-blue-500">
-                    </div>
-                    <fieldset class="space-y-2">
-                        <legend class="mb-2 text-gray-700">Género</legend>
-                        <div class="flex flex-wrap gap-4">
-                            <div class="flex items-center">
-                                <input type="radio" id="masculino" name="genero" value="masculino" class="form-radio">
-                                <label for="masculino" class="ml-2 text-gray-700">Masculino</label>
-                            </div>
-                            <div class="flex items-center">
-                                <input type="radio" id="femenino" name="genero" value="femenino" class="form-radio">
-                                <label for="femenino" class="ml-2 text-gray-700">Femenino</label>
-                            </div>
-                            <div class="flex items-center">
-                                <input type="radio" id="otro" name="genero" value="otro" class="form-radio">
-                                <label for="otro" class="ml-2 text-gray-700">Otro</label>
-                            </div>
-                        </div>
-                    </fieldset>
+      <div
+        class="w-full max-w-4xl p-6 bg-white rounded-md shadow-lg"
+        data-aos="zoom-in"
+      >
+        <h1 class="mb-6 text-2xl font-bold text-gray-800">Ingresa tus datos</h1>
+        <form class="space-y-4" id="form-calculadora">
+          <div class="md:grid md:grid-cols-2 md:gap-4">
+            <div class="flex flex-col my-1">
+              <div class="flex flex-wrap">
+                <label for="edad" class="mb-2 text-gray-700">Edad</label>
+                <img src="./assets/user.svg" alt="user-icon" class="mb-2" />
+              </div>
+              <input
+                type="number"
+                id="edad"
+                name="edad"
+                placeholder="Años"
+                class="border-gray-300 rounded-md form-input focus:border-blue-500 focus:ring-blue-500 icon-placeholder"
+                required
+              />
+            </div>
+            <div class="flex flex-col my-1">
+              <div class="flex flex-wrap">
+                <label for="altura" class="mb-2 text-gray-700">Altura</label>
+                <img src="./assets/ruler.svg" alt="ruler-icon" class="mb-2" />
+              </div>
+              <input
+                type="number"
+                id="altura"
+                name="altura"
+                placeholder="cm"
+                class="border-gray-300 rounded-md form-input focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+            <div class="flex flex-col">
+              <div class="flex flex-wrap">
+                <label for="peso" class="mb-2 text-gray-700">Peso</label>
+                <img src="./assets/weight.svg" alt="weight-icon" class="mb-2" />
+              </div>
+              <input
+                type="number"
+                id="peso"
+                name="peso"
+                placeholder="kg"
+                class="border-gray-300 rounded-md form-input focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+            <fieldset class="space-y-2">
+              <legend class="mb-2 text-gray-700">Género</legend>
+              <div class="flex flex-wrap gap-4">
+                <div class="flex items-center">
+                  <input
+                    type="radio"
+                    id="masculino"
+                    name="genero"
+                    value="masculino"
+                    class="form-radio"
+                  />
+                  <label for="masculino" class="ml-2 text-gray-700"
+                    >Masculino</label
+                  >
                 </div>
-                <div class="flex flex-col">
-                    <label for="objetivo" class="mb-2">Objetivo</label>
-                    <select id="objetivo" name="objetivo"
-                        class="border-gray-300 rounded-md form-select focus:border-blue-500 focus:ring-blue-500">
-                        <option value="Perder peso">Perder peso</option>
-                        <option value="Aumentar energía">Aumentar energía</option>
-                        <option value="Fortalecer Sistema Inmunológico">Fortalecer el Sistema Inmunológico</option>
-                        <option value="Mejorar Salud Digestiva">Mejorar la Salud Digestiva</option>
-                        <option value="Mejora Concentración y Memoria">Mejora de la Concentración y Memoria
-                        </option>
-                        <option value="Aumentar masa muscular">Aumentar masa muscular</option>
-                    </select>
+                <div class="flex items-center">
+                  <input
+                    type="radio"
+                    id="femenino"
+                    name="genero"
+                    value="femenino"
+                    class="form-radio"
+                  />
+                  <label for="femenino" class="ml-2 text-gray-700"
+                    >Femenino</label
+                  >
                 </div>
-                <button type="submit"
-                    class="flex flex-wrap justify-center w-full px-4 py-2 text-center text-white transition-colors rounded-md bg-button hover:bg-button">
-                    Calcular
-                    <img src="./assets/calculate.svg" alt="calculate-icon" class="ml-2">
-                </button>
-            </form>
-        </div>
-        <div class="w-full max-w-4xl p-6 m-2 bg-white rounded-md shadow-lg" data-aos="fade-up">
-            <h1 class="text-2xl font-bold">Resumen de tus datos</h1>
-            <div class="flex flex-wrap gap-4">
-                <p>Edad: <span id="resumen-edad">...</span></p>
-                <p>Altura: <span id="resumen-altura">...</span></p>
-                <p>Peso: <span id="resumen-peso">...</span></p>
-                <p>Género: <span id="resumen-genero">...</span></p>
-                <p>Objetivo: <span id="resumen-objetivo">...</span></p>
-            </div>
-        </div>
-        <div class="w-full max-w-4xl p-6 bg-white rounded-md shadow-lg" data-aos="fade-right">
-            <h1 class="text-2xl font-bold">Índice de masa corporal (IMC)</h1>
-            <div class="text-center">
-                <p class="text-2xl font-bold" id="resultado-imc">...</p>
-                <span>kg/m²</span>
-            </div>
-        </div>
-        <div class="w-full max-w-4xl p-6 m-2 bg-white rounded-md shadow-lg" data-aos="fade-left">
-            <h1 class="text-2xl font-bold">Calorías recomendadas x día</h1>
-            <div class="text-center">
-                <p class="text-2xl font-bold" id="resultado-calorias">...</p>
-                <span>kcal</span>
-            </div>
-        </div>
-        <div class="w-full max-w-4xl p-6 bg-white rounded-md shadow-lg" data-aos="fade-right">
-            <h1 class="text-2xl font-bold">Productos que te ayudarán</h1>
-            <div id="container" class="max-w-4xl px-4 py-8 mx-auto sm:px-6 lg:px-8">
-                <div id="productos" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                    <!-- Productos sugeridos se agregarán dinámicamente aquí -->
+                <div class="flex items-center">
+                  <input
+                    type="radio"
+                    id="otro"
+                    name="genero"
+                    value="otro"
+                    class="form-radio"
+                  />
+                  <label for="otro" class="ml-2 text-gray-700">Otro</label>
                 </div>
-            </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="flex flex-col">
+            <label for="objetivo" class="mb-2">Objetivo</label>
+            <select
+              id="objetivo"
+              name="objetivo"
+              class="border-gray-300 rounded-md form-select focus:border-blue-500 focus:ring-blue-500"
+            >
+              <option value="Perder peso">Perder peso</option>
+              <option value="Aumentar energía">Aumentar energía</option>
+              <option value="Fortalecer Sistema Inmunológico">
+                Fortalecer el Sistema Inmunológico
+              </option>
+              <option value="Mejorar Salud Digestiva">
+                Mejorar la Salud Digestiva
+              </option>
+              <option value="Mejora Concentración y Memoria">
+                Mejora de la Concentración y Memoria
+              </option>
+              <option value="Aumentar masa muscular">
+                Aumentar masa muscular
+              </option>
+            </select>
+          </div>
+          <button
+            type="submit"
+            class="flex flex-wrap justify-center w-full px-4 py-2 text-center text-white transition-colors rounded-md bg-button hover:bg-button"
+          >
+            Calcular
+            <img
+              src="./assets/calculate.svg"
+              alt="calculate-icon"
+              class="ml-2"
+            />
+          </button>
+        </form>
+      </div>
+      <div
+        class="w-full max-w-4xl p-6 m-2 bg-white rounded-md shadow-lg"
+        data-aos="fade-up"
+      >
+        <h1 class="text-2xl font-bold">Resumen de tus datos</h1>
+        <div class="flex flex-wrap gap-4">
+          <p>Edad: <span id="resumen-edad">...</span></p>
+          <p>Altura: <span id="resumen-altura">...</span></p>
+          <p>Peso: <span id="resumen-peso">...</span></p>
+          <p>Género: <span id="resumen-genero">...</span></p>
+          <p>Objetivo: <span id="resumen-objetivo">...</span></p>
+        </div>
+      </div>
+      <div
+        class="w-full max-w-4xl p-6 bg-white rounded-md shadow-lg"
+        data-aos="fade-right"
+      >
+        <h1 class="text-2xl font-bold">Índice de masa corporal (IMC)</h1>
+        <div class="text-center">
+          <p class="text-2xl font-bold" id="resultado-imc">...</p>
+          <span>kg/m²</span>
+          <p class="mt-4 text-lg font-semibold" id="imc-categoria">Estado</p>
 
         </div>
-        <span class="m-2 text-center text-white" data-aos="zoom-in-up">Calculadora creada para ayudarte a alcanzar tus
-            metas de
-            bienestar</span>
+      </div>
+      <div
+        class="w-full max-w-4xl p-6 m-2 bg-white rounded-md shadow-lg"
+        data-aos="fade-left"
+      >
+        <h1 class="text-2xl font-bold">Calorías recomendadas x día</h1>
+        <div class="text-center">
+          <p class="text-2xl font-bold" id="resultado-calorias">...</p>
+          <span>kcal</span>
+        </div>
+      </div>
+      <div
+        class="w-full max-w-4xl p-6 bg-white rounded-md shadow-lg"
+        data-aos="fade-right"
+      >
+        <h1 class="text-2xl font-bold">Productos que te ayudarán</h1>
+        <div id="container" class="max-w-4xl px-4 py-8 mx-auto sm:px-6 lg:px-8">
+          <div
+            id="productos"
+            class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            <!-- Productos sugeridos se agregarán dinámicamente aquí -->
+          </div>
+        </div>
+      </div>
+      <span class="m-2 text-center text-white" data-aos="zoom-in-up"
+        >Calculadora creada para ayudarte a alcanzar tus metas de
+        bienestar</span
+      >
     </main>
-    <footer class="p-6 mt-8 text-center text-white bg-gray-900" data-aos="fade-up">
-        <p class="text-sm">&copy; 2025 My Condition. Todos los derechos reservados.</p>
-        <p>Desarrollado por Jois Rosales.</p>
+    <footer
+      class="p-6 mt-8 text-center text-white bg-gray-900"
+      data-aos="fade-up"
+    >
+      <p class="text-sm">
+        &copy; 2025 My Condition. Todos los derechos reservados.
+      </p>
+      <p>Desarrollado por Jois Rosales.</p>
     </footer>
-</body>
-
+  </body>
 </html>
